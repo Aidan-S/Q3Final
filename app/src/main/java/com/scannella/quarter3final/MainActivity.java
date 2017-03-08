@@ -1,7 +1,9 @@
 package com.scannella.quarter3final;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Point;
+import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +18,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     //final Handler handler = new Handler();
-    Display display = getWindowManager().getDefaultDisplay();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         final Button button = (Button) findViewById(R.id.btnClick);
 
-        Point size = new Point();
-        display.getSize(size);
+        final MediaPlayer play = MediaPlayer.create(this,R.raw.exclamation);
 
 
 
@@ -34,18 +35,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
+                //Display display = getWindowManager().getDefaultDisplay();
 
 
                 //int newX = new Random().nextInt(metrics.heightPixels - 50);     //number from 0-
                 //int newY = new Random().nextInt(metrics.widthPixels - 50);
 
-                int newX = (int)(Math.random() * display.getWidth() + 1);
-                int newY = (int)(Math.random() * display.getHeight() + 1);
+                //int newX = (int)(Math.random() * display.getWidth() + 1);
+                //int newY = (int)(Math.random() * display.getHeight() + 1);
 
 
-                button.setX(newX);
-                button.setY(newY);
+                //button.setX();
+                //button.setY();
+
+
+                play.start();
+
             }
         });
 
