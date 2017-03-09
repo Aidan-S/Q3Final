@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+
         if (id == R.id.itmSettings) {
 
             Intent intent = new Intent(MainActivity.this, Settings.class);
