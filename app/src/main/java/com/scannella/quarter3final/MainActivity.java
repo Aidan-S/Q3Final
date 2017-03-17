@@ -3,9 +3,11 @@ package com.scannella.quarter3final;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.media.MediaPlayer;
 import android.os.Handler;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private int maxHeight;
     private RelativeLayout relativeLayout;
     private View myView;
+    public boolean disco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         handler.postDelayed(runnable,3000);
+
+
+
     }
 
     private Handler handler = new Handler();
@@ -114,4 +120,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 0, 3000);//Update button every three seconds
     }
-}
+
+
+
+    }
+
+
+
