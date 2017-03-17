@@ -18,6 +18,7 @@ public class Settings extends AppCompatActivity {
 
     }
 
+    //starts disco af
     public void clickYes(View view){
         discoLights(500);
 
